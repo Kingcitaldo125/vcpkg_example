@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build -t asdf .
+docker build -t vcpkg_example .
