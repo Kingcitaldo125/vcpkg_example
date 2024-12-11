@@ -1,15 +1,15 @@
 FROM debian:11
 
 RUN apt -y update && \
-    apt -y install build-essential vim tar git curl zip unzip pkg-config
+    apt -y install build-essential git curl zip unzip pkg-config
+
+WORKDIR /
 
 RUN git clone https://github.com/microsoft/vcpkg.git && \
     cd /vcpkg && \
     ./bootstrap-vcpkg.sh
 
-WORKDIR /
-
-RUN rm -rf /vcpkg/${VCPKG_VERSION}.tar.gz && /vcpkg/vcpkg install fmt
+RUN /vcpkg/vcpkg install fmt
 
 ENV VCPKG_ROOT="/vcpkg"
 ENV PATH="$PATH:/vcpkg"
