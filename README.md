@@ -1,6 +1,6 @@
 # Vcpkg example
 
-Basic Vcpkg example using Docker
+Basic [Vcpkg](https://github.com/microsoft/vcpkg) example using Docker
 
 ## Building
 Build using Docker and the shell script:
