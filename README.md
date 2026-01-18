@@ -17,10 +17,10 @@ Every vcpkg 'package' is effectively a link to a GitHub repository that contains
 Vcpkg works by effectively handling third-party dependencies for a project as git submodule clones and buildsystem invocations.
 
 Whenever a project using Vcpkg is built, the vcpkg build for all project dependencies works out the dependency tree/hierarchy
-for all dependencies, builds the dependencies in accordance to the dependency tree/hierarchy, and exposes the ABI to the rest
-of the core project (headers, libs, and CMake files (package config files, modules, etc.)).
+for all dependencies, builds the dependencies in accordance to the dependency tree/hierarchy, and exposes the ABI of the build files
+to the rest of the core project (headers, libs, and CMake files (package config files, modules, etc.)).
 
-Since this approach doesn't use a binary package file format like many other package managers (rpm, pip, etc.),
+Since this approach doesn't use a binary package file format like other package managers (rpm, pip, etc.),
 and because version tracking isn't fully fleshed out for existing dependencies, in terms of forward or backwards compatibility,
 this is why the term 'lightweight' is being used to describe vcpkg.
 
