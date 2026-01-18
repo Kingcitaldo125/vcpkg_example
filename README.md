@@ -13,6 +13,7 @@ More info regarding what vcpkg is, and how it works, is described below.
 
 ## Vcpkg overview
 Vcpkg is a lightweight package management system for C and C++ libraries that have roots tied back into GitHub.
+Every vcpkg 'package' is effectively a link to a GitHub repository that contains the package's source code and buildsystem files.
 Vcpkg works by effectively handling third-party dependencies for a project as git submodule clones and buildsystem invocations.
 
 Whenever a project using Vcpkg is built, the vcpkg build for all project dependencies works out the dependency tree/hierarchy
